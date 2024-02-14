@@ -24,7 +24,7 @@ Form donde se suben a la BD un _nombre_ y un _rubro_.
 **Buscador:**
 El buscador solamente funciona con la categoria empleados, anda correctamente pero al inicio, por debajo de las casillas a rellenar (_son opcionales, no hace falta rellenar todas_) aparecen todos los empleados registrados en la BD.
 
-Cabe destacar que los forms no tienen aplicado CSS.
+Cabe destacar que los forms no tienen aplicado CSS. **Para una mejor navegación entre las urls se puede usar el NAVBAR**
 
 Sin mas que añadir espero que cumpla con las condiciones pedidas.
 
