@@ -6,6 +6,7 @@ class Empleado(models.Model):
     nombre = models.CharField(max_length=40)
     apellido = models.CharField(max_length=20)
     trabajo = models.CharField(max_length=40)
+    
 
 class Trabajo(models.Model):
     rubro = models.CharField(max_length=40)

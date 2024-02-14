@@ -6,7 +6,7 @@
       class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center"
     >
       <div class="col-lg-8 align-self-end">
-        <h1 class="text-white font-weight-bold">EMPLEADOS</h1>
+        <h1 class="text-white font-weight-bold">BUSCADOR</h1>
         <hr class="divider" />
       </div>
       <div class="col-lg-8 align-self-baseline">
@@ -21,11 +21,16 @@
   </div>
 </header>
 {% endblock main %} {% block formulario %}
-<form action="" method="post">
-  {% csrf_token %}
-  <p>Nombre: <input type="text" name="nombre" /></p>
-  <p>Apellido: <input type="text" name="apellido" /></p>
-  <p>Trabajo: <input type="text" name="trabajo" /></p>
-  <input type="submit" value="Enviar" />
+<form method="post" action="">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Buscar</button>
 </form>
+<ul>
+  {% for empleado in empleados %}
+  <li>
+    {{ empleado.nombre }} {{ empleado.apellido }} - {{ empleado.trabajo }}
+  </li>
+  {% endfor %}
+</ul>
+
 {% endblock formulario %}
